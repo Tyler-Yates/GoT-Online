@@ -1,4 +1,4 @@
-import java.io.*;
+import java.io.Serializable;
 /*
  * This class defines the different type of messages that will be exchanged between the
  * Clients and the Server. 

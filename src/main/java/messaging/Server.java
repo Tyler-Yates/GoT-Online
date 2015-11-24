@@ -1,7 +1,11 @@
-import java.io.*;
-import java.net.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
 
 /*
  * The server that can be run both as a console application or a GUI
@@ -58,7 +62,7 @@ public class Server {
 			while(keepGoing) 
 			{
 				// format message saying we are waiting
-				display("Server waiting for Clients on port " + port + ".");
+				display("Server waiting for Clients on port " + port + "");
 				
 				Socket socket = serverSocket.accept();  	// accept connection
 				// if I was asked to stop
