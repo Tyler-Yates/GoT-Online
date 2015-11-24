@@ -1,3 +1,5 @@
+package got.common;
+
 import java.io.Serializable;
 /*
  * This class defines the different type of messages that will be exchanged between the
@@ -13,21 +15,21 @@ public class ChatMessage implements Serializable {
 	// WHOISIN to receive the list of the users connected
 	// MESSAGE an ordinary message
 	// LOGOUT to disconnect from the Server
-	static final int WHOISIN = 0, MESSAGE = 1, LOGOUT = 2;
+	public static final int WHOISIN = 0, MESSAGE = 1, LOGOUT = 2;
 	private int type;
 	private String message;
 	
 	// constructor
-	ChatMessage(int type, String message) {
+	public ChatMessage(int type, String message) {
 		this.type = type;
 		this.message = message;
 	}
 	
 	// getters
-	int getType() {
+	public int getType() {
 		return type;
 	}
-	String getMessage() {
+	public String getMessage() {
 		return message;
 	}
 }
